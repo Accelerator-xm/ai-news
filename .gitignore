@@ -218,3 +218,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+ai-news/backend/.venv/
+venv/
+__pycache__/
+*.py[cod]
+ai-news/frontend/node_modules/
+ai-news/frontend/dist/
+.env
+.env.*
+!.env.example
+*.log
+.idea/
+.vscode/
+.DS_Store
+.venv-docs/
+site/
+.cache/

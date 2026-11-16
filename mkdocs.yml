@@ -1,0 +1,71 @@
+site_name: AI News · 学习笔记
+site_description: Python、FastAPI、SQLAlchemy、认证、Redis 与 AI 流式输出的知识笔记。
+site_url: !ENV [MKDOCS_SITE_URL, 'http://127.0.0.1:8001/']
+repo_url: !ENV [MKDOCS_REPO_URL, '']
+repo_name: ai-news
+edit_uri: ''
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+theme:
+  name: material
+  language: zh
+  font: false
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色
+plugins:
+  - search:
+      lang: en
+      pipeline: []
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+extra_css:
+  - assets/stylesheets/extra.css
+extra:
+  generator: false
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+nav:
+  - 首页: index.md
+  - Python: python.md
+  - FastAPI: fastapi.md
+  - SQLAlchemy: sqlalchemy.md
+  - 认证: authentication.md
+  - Redis: redis.md
+  - AI 对话: ai.md
